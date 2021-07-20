@@ -13,6 +13,7 @@ pipeline {
 		}
 		
 		stage('TEST') {
+			agent { label 'master' }
 			steps {
 				sh '''
 					pwd
