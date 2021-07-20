@@ -1,5 +1,5 @@
 pipeline {
-	agent master  
+	agent none  
 	stages {
 		stage('BUILD') {
 			steps {
@@ -20,7 +20,7 @@ pipeline {
 				'''
 			}	
 		}
-		
+		agent master
 		stage('DEPLOY') {
 			steps {
 				sh '''
