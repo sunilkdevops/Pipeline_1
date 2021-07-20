@@ -20,7 +20,7 @@ pipeline {
 				'''
 			}	
 		}
-		agent master
+		agent { label 'master' }
 		stage('DEPLOY') {
 			steps {
 				sh '''
